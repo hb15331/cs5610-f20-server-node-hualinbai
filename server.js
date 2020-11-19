@@ -9,11 +9,11 @@ app.use(bodyParser.json())
 
 
 // share the app with quizService
-const quizService = require("./services/quizzes-service")
-quizService(app)
+const quizController = require("./controllers/quizzes-controller")
+quizController(app)
 
 // share the app with questionService
-require("./services/questions-service")(app)
+require("./controllers/questions-controller")(app)
 
 // listen at port number for incoming HTTP request
 app.listen(3000);
