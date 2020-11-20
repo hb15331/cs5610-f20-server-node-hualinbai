@@ -1,10 +1,6 @@
 
 // data model goes to quizzes.json file
-let quizzes = [
-    {_id: "123", title: "Quiz 1"},
-    {_id: "234", title: "Quiz 2"},
-    {_id: "345", title: "Quiz 3"}
-]
+let quizzes = require("./quizzes.json")
 
 
 const findAllQuizzes = () => quizzes
