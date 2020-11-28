@@ -3,15 +3,19 @@ const questionService = require("../services/questions-service")
 
 module.exports = (app) => {
 
+    const findAllQuestions = (req, res) =>
+        questionService.findAllQuestions()
+            .then(questions => res.send(questions))
+
+
     const findQuestionsForQuiz = (req, res) => {
         const quizId = req.params["qid"]
-        const questionsForQuiz = questionService.findQuestionsForQuiz(quizId)
-        res.send(questionsForQuiz)
+        questionService.findQuestionsForQuiz(quizId)
+            .then(questions => res.send(questions))
     }
 
 
-    // encode one-to-many relationship into restful url
-    // find questions by quiz id
+    app.get("/api/questions", findAllQuestions)
     app.get("/api/quizzes/:qid/questions", findQuestionsForQuiz)
 
 }

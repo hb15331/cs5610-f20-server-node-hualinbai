@@ -2,6 +2,13 @@
 const express = require("express")
 const app = express()
 
+
+// connect to the database whiteboard
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/whiteboard', {useNewUrlParser: true});
+
+
+
 const bodyParser = require('body-parser')
 // turn on the JSON parser
 app.use(bodyParser.urlencoded({ extended: false }))
