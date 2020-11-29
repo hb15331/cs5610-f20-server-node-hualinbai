@@ -1,19 +1,26 @@
 
-let questions = require("./questions.json")
-const questionModel = require("../models/questions/questionModel")
+// let questions = require("./questions.json")
+// const questionModel = require("../models/questions/questionModel")
+
+const questionsDao = require('../daos/questions-dao')
 
 
 const findAllQuestions = () =>
-    questionModel.findAllQuestions()
+    questionsDao.findAllQuestions()
+
+
+const findQuestionById = (questionId) =>
+    questionsDao.findQuestionById(questionId)
 
 
 const findQuestionsForQuiz = (quizId) =>
-    questionModel.findQuestionForQuiz(quizId)
+    questionsDao.findQuestionsForQuiz(quizId)
 
 
 
 module.exports = {
     findAllQuestions,
+    findQuestionById,
     findQuestionsForQuiz
 }
 

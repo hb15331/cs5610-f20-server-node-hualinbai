@@ -15,8 +15,16 @@ module.exports = (app) => {
     }
 
 
+    const findQuestionById = (req, res) => {
+        const questionId = req.params["questionId"]
+        questionService.findQuestionById(questionId)
+            .then(question => res.send(question))
+    }
+
+
     app.get("/api/questions", findAllQuestions)
     app.get("/api/quizzes/:qid/questions", findQuestionsForQuiz)
+    app.get("/api/questions/:questionId", findQuestionById)
 
 }
 

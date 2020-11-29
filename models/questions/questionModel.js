@@ -4,17 +4,17 @@ const questionSchema = require("./questionSchema")
 // use the schema to build the model
 const questionModel = mongoose.model("QuestionModel", questionSchema)
 
-const findAllQuestions = () =>
-    questionModel.find()
+// const findAllQuestions = () =>
+//     questionModel.find()
+//
+//
+// const findQuestionForQuiz = (quizId) =>
+//     questionModel.find({quizId: quizId})
 
 
-const findQuestionForQuiz = (quizId) =>
-    questionModel.find({quizId: quizId})
+// module.exports = {
+//     findAllQuestions,
+//     findQuestionForQuiz
+// }
 
-
-
-
-module.exports = {
-    findAllQuestions,
-    findQuestionForQuiz
-}
+module.exports = questionModel

@@ -3,10 +3,12 @@ const mongoose = require("mongoose")
 
 // this schema lives in the questions collection in our database
 const questionSchema = mongoose.Schema({
+    title: String,
     question: String,
-    quizId: String,
-    points: Number,
-    options: [String]
+    correct: String,
+    answer: String,
+    type: {type: String, enum: ['TRUE_FALSE', 'MULTIPLE_CHOICE', 'ESSAY']},
+    choices: [String]
 }, {collection: "questions"})
 
 
