@@ -17,34 +17,9 @@ module.exports = (app) => {
             .then(quiz => res.send(quiz))
     }
 
-
-    // const createQuiz = (req, res) => {
-    //     quizzesService.createQuiz(req.body.quiz)
-    //         .then(actualQuiz => res.send(actualQuiz))
-    // }
-    //
-    //
-    // const deleteQuiz = (req, res) => {
-    //     const quizId = req.params.qid
-    //     quizzesService.deleteQuiz(quizId)
-    //         .then(status => res.send(status))
-    // }
-    //
-    //
-    // const updateQuiz = (req, res) => {
-    //     const quizId = req.params.qid
-    //     const newQuiz = req.body
-    //     quizzesService.updateQuiz(quizId, newQuiz)
-    //         .then(status => res.send(status))
-    // }
-
-
     app.get("/api/quizzes", findAllQuizzes)
     app.get("/api/quizzes/:qid", findQuizById)
 
-    // app.post("/api/quizzes", createQuiz)
-    // app.delete("/api/quizzes/:qid", deleteQuiz)
-    // app.put("/api/quizzes/:qid", updateQuiz)
 
 
 }

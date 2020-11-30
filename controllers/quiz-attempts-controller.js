@@ -17,8 +17,7 @@ module.exports = (app) => {
     }
 
 
-
     app.post("/api/quizzes/:qid/attempts", createAttempt)
-    app.get("/api/quizzes/qid/attempts", findAttemptsForQuiz)
+    app.get("/api/quizzes/:qid/attempts", findAttemptsForQuiz)
 
 }
