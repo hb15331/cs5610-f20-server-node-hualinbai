@@ -4,7 +4,7 @@ const app = express()
 // connect to mongoDB databases
 const mongoose = require('mongoose');
 // mongoose.connect('mongodb://localhost/whiteboard-A9', {useNewUrlParser: true});
-mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/whiteboard-A9', {useNewUrlParser: true});
 
 const bodyParser = require('body-parser')
 // turn on the JSON parser
