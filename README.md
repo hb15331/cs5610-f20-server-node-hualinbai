@@ -21,5 +21,13 @@ Use Mongoose to create schemas and models for the quizzes, questions, and attemp
 
 
 ## 👨🏻‍💻 Run Locally
+- Install dependencies
+```bash
+  npm install
+```
 
+- Launch the app at localhost:5000
+```bash
+  npm start
+```
 
