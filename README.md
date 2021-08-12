@@ -3,7 +3,10 @@
 This project focuses on creating RESTful Web services using Node.js and Express library as
 well as integrating an Angular front end to interact with a set of Web APIs.
 We will use MongoDB to permanently store student attempts at answering questions 
-on quizzes stored in the database.
+on quizzes stored in the database. <br />
+
+Also see the repository for the Angular front end of this WhiteBoard app:
+https://github.com/hb15331/cs5610-f20-client-angular-hualinbai
 
 
 ## :sparkles: Features
